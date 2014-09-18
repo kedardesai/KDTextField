@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BBE251319CACBB10069CEE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE251219CACBB10069CEE6 /* Foundation.framework */; };
+		1BBE251519CACBB10069CEE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE251419CACBB10069CEE6 /* CoreGraphics.framework */; };
+		1BBE251719CACBB10069CEE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE251619CACBB10069CEE6 /* UIKit.framework */; };
+		1BBE251D19CACBB10069CEE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BBE251B19CACBB10069CEE6 /* InfoPlist.strings */; };
+		1BBE251F19CACBB10069CEE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE251E19CACBB10069CEE6 /* main.m */; };
+		1BBE252319CACBB10069CEE6 /* KDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE252219CACBB10069CEE6 /* KDAppDelegate.m */; };
+		1BBE252619CACBB10069CEE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BBE252419CACBB10069CEE6 /* Main.storyboard */; };
+		1BBE252919CACBB10069CEE6 /* KDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE252819CACBB10069CEE6 /* KDViewController.m */; };
+		1BBE252B19CACBB10069CEE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BBE252A19CACBB10069CEE6 /* Images.xcassets */; };
+		1BBE253219CACBB10069CEE6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE253119CACBB10069CEE6 /* XCTest.framework */; };
+		1BBE253319CACBB10069CEE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE251219CACBB10069CEE6 /* Foundation.framework */; };
+		1BBE253419CACBB10069CEE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE251619CACBB10069CEE6 /* UIKit.framework */; };
+		1BBE253C19CACBB10069CEE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BBE253A19CACBB10069CEE6 /* InfoPlist.strings */; };
+		1BBE253E19CACBB10069CEE6 /* KDTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE253D19CACBB10069CEE6 /* KDTextFieldTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BBE253519CACBB10069CEE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BBE250719CACBB10069CEE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BBE250E19CACBB10069CEE6;
+			remoteInfo = KDTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BBE250F19CACBB10069CEE6 /* KDTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBE251219CACBB10069CEE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1BBE251419CACBB10069CEE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1BBE251619CACBB10069CEE6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1BBE251A19CACBB10069CEE6 /* KDTextField-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KDTextField-Info.plist"; sourceTree = "<group>"; };
+		1BBE251C19CACBB10069CEE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BBE251E19CACBB10069CEE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BBE252019CACBB10069CEE6 /* KDTextField-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KDTextField-Prefix.pch"; sourceTree = "<group>"; };
+		1BBE252119CACBB10069CEE6 /* KDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KDAppDelegate.h; sourceTree = "<group>"; };
+		1BBE252219CACBB10069CEE6 /* KDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KDAppDelegate.m; sourceTree = "<group>"; };
+		1BBE252519CACBB10069CEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BBE252719CACBB10069CEE6 /* KDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KDViewController.h; sourceTree = "<group>"; };
+		1BBE252819CACBB10069CEE6 /* KDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KDViewController.m; sourceTree = "<group>"; };
+		1BBE252A19CACBB10069CEE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1BBE253019CACBB10069CEE6 /* KDTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KDTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBE253119CACBB10069CEE6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1BBE253919CACBB10069CEE6 /* KDTextFieldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KDTextFieldTests-Info.plist"; sourceTree = "<group>"; };
+		1BBE253B19CACBB10069CEE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BBE253D19CACBB10069CEE6 /* KDTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KDTextFieldTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BBE250C19CACBB10069CEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBE251519CACBB10069CEE6 /* CoreGraphics.framework in Frameworks */,
+				1BBE251719CACBB10069CEE6 /* UIKit.framework in Frameworks */,
+				1BBE251319CACBB10069CEE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BBE252D19CACBB10069CEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBE253219CACBB10069CEE6 /* XCTest.framework in Frameworks */,
+				1BBE253419CACBB10069CEE6 /* UIKit.framework in Frameworks */,
+				1BBE253319CACBB10069CEE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BBE250619CACBB10069CEE6 = {
+			isa = PBXGroup;
+			children = (
+				1BBE251819CACBB10069CEE6 /* KDTextField */,
+				1BBE253719CACBB10069CEE6 /* KDTextFieldTests */,
+				1BBE251119CACBB10069CEE6 /* Frameworks */,
+				1BBE251019CACBB10069CEE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BBE251019CACBB10069CEE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE250F19CACBB10069CEE6 /* KDTextField.app */,
+				1BBE253019CACBB10069CEE6 /* KDTextFieldTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BBE251119CACBB10069CEE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE251219CACBB10069CEE6 /* Foundation.framework */,
+				1BBE251419CACBB10069CEE6 /* CoreGraphics.framework */,
+				1BBE251619CACBB10069CEE6 /* UIKit.framework */,
+				1BBE253119CACBB10069CEE6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BBE251819CACBB10069CEE6 /* KDTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE252119CACBB10069CEE6 /* KDAppDelegate.h */,
+				1BBE252219CACBB10069CEE6 /* KDAppDelegate.m */,
+				1BBE252419CACBB10069CEE6 /* Main.storyboard */,
+				1BBE252719CACBB10069CEE6 /* KDViewController.h */,
+				1BBE252819CACBB10069CEE6 /* KDViewController.m */,
+				1BBE252A19CACBB10069CEE6 /* Images.xcassets */,
+				1BBE251919CACBB10069CEE6 /* Supporting Files */,
+			);
+			path = KDTextField;
+			sourceTree = "<group>";
+		};
+		1BBE251919CACBB10069CEE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE251A19CACBB10069CEE6 /* KDTextField-Info.plist */,
+				1BBE251B19CACBB10069CEE6 /* InfoPlist.strings */,
+				1BBE251E19CACBB10069CEE6 /* main.m */,
+				1BBE252019CACBB10069CEE6 /* KDTextField-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BBE253719CACBB10069CEE6 /* KDTextFieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE253D19CACBB10069CEE6 /* KDTextFieldTests.m */,
+				1BBE253819CACBB10069CEE6 /* Supporting Files */,
+			);
+			path = KDTextFieldTests;
+			sourceTree = "<group>";
+		};
+		1BBE253819CACBB10069CEE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE253919CACBB10069CEE6 /* KDTextFieldTests-Info.plist */,
+				1BBE253A19CACBB10069CEE6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BBE250E19CACBB10069CEE6 /* KDTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BBE254119CACBB10069CEE6 /* Build configuration list for PBXNativeTarget "KDTextField" */;
+			buildPhases = (
+				1BBE250B19CACBB10069CEE6 /* Sources */,
+				1BBE250C19CACBB10069CEE6 /* Frameworks */,
+				1BBE250D19CACBB10069CEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KDTextField;
+			productName = KDTextField;
+			productReference = 1BBE250F19CACBB10069CEE6 /* KDTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BBE252F19CACBB10069CEE6 /* KDTextFieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BBE254419CACBB10069CEE6 /* Build configuration list for PBXNativeTarget "KDTextFieldTests" */;
+			buildPhases = (
+				1BBE252C19CACBB10069CEE6 /* Sources */,
+				1BBE252D19CACBB10069CEE6 /* Frameworks */,
+				1BBE252E19CACBB10069CEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BBE253619CACBB10069CEE6 /* PBXTargetDependency */,
+			);
+			name = KDTextFieldTests;
+			productName = KDTextFieldTests;
+			productReference = 1BBE253019CACBB10069CEE6 /* KDTextFieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BBE250719CACBB10069CEE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Kedar Desai";
+				TargetAttributes = {
+					1BBE252F19CACBB10069CEE6 = {
+						TestTargetID = 1BBE250E19CACBB10069CEE6;
+					};
+				};
+			};
+			buildConfigurationList = 1BBE250A19CACBB10069CEE6 /* Build configuration list for PBXProject "KDTextField" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BBE250619CACBB10069CEE6;
+			productRefGroup = 1BBE251019CACBB10069CEE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BBE250E19CACBB10069CEE6 /* KDTextField */,
+				1BBE252F19CACBB10069CEE6 /* KDTextFieldTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BBE250D19CACBB10069CEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBE252B19CACBB10069CEE6 /* Images.xcassets in Resources */,
+				1BBE251D19CACBB10069CEE6 /* InfoPlist.strings in Resources */,
+				1BBE252619CACBB10069CEE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BBE252E19CACBB10069CEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBE253C19CACBB10069CEE6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BBE250B19CACBB10069CEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBE252919CACBB10069CEE6 /* KDViewController.m in Sources */,
+				1BBE251F19CACBB10069CEE6 /* main.m in Sources */,
+				1BBE252319CACBB10069CEE6 /* KDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BBE252C19CACBB10069CEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBE253E19CACBB10069CEE6 /* KDTextFieldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BBE253619CACBB10069CEE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BBE250E19CACBB10069CEE6 /* KDTextField */;
+			targetProxy = 1BBE253519CACBB10069CEE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1BBE251B19CACBB10069CEE6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BBE251C19CACBB10069CEE6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1BBE252419CACBB10069CEE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BBE252519CACBB10069CEE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1BBE253A19CACBB10069CEE6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BBE253B19CACBB10069CEE6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BBE253F19CACBB10069CEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1BBE254019CACBB10069CEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BBE254219CACBB10069CEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KDTextField/KDTextField-Prefix.pch";
+				INFOPLIST_FILE = "KDTextField/KDTextField-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1BBE254319CACBB10069CEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KDTextField/KDTextField-Prefix.pch";
+				INFOPLIST_FILE = "KDTextField/KDTextField-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1BBE254519CACBB10069CEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KDTextField.app/KDTextField";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KDTextField/KDTextField-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KDTextFieldTests/KDTextFieldTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1BBE254619CACBB10069CEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KDTextField.app/KDTextField";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KDTextField/KDTextField-Prefix.pch";
+				INFOPLIST_FILE = "KDTextFieldTests/KDTextFieldTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BBE250A19CACBB10069CEE6 /* Build configuration list for PBXProject "KDTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BBE253F19CACBB10069CEE6 /* Debug */,
+				1BBE254019CACBB10069CEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BBE254119CACBB10069CEE6 /* Build configuration list for PBXNativeTarget "KDTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BBE254219CACBB10069CEE6 /* Debug */,
+				1BBE254319CACBB10069CEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1BBE254419CACBB10069CEE6 /* Build configuration list for PBXNativeTarget "KDTextFieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BBE254519CACBB10069CEE6 /* Debug */,
+				1BBE254619CACBB10069CEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BBE250719CACBB10069CEE6 /* Project object */;
+}
