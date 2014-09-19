@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KDTextField.h"
 
-@interface KDViewController : UIViewController
+@interface KDViewController : UIViewController <KDTextFieldDelegate>
+
+@property (nonatomic, strong) IBOutlet KDTextField *kdTextField;
+
+- (IBAction)validateButtonClicked:(id)sender;
 
 @end

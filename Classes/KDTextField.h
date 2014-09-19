@@ -8,32 +8,41 @@
 
 #import <UIKit/UIKit.h>
 
+@class KDTextField;
+
 typedef enum {
     
     kTextFieldTypeDefault, // Default
     kTextFieldTypeEmail, // For email-id as text
     kTextFieldTypeNumber, // For numberic textField
+    kTextFieldTypeDecimalNumber, // For decimal numberic textField
     kTextFieldTypeString, // Only for string without symbols and number
     kTextFieldTypePassword,
-    kTextFieldTypeSSN // For set format _ _ _ _ or _ _ _ - _ _ _ like this
+    kTextFieldTypeSSN, // For set format _ _ _ _ or _ _ _ - _ _ _ like this
+    kTextFieldTypeCustom
     
 } KDTextFieldType;
 
 @protocol KDTextFieldDelegate <NSObject>
 
 @optional
-- (void)onError:(NSError *)error;
-- (void)onSucess:(BOOL)success;
+- (void)onError:(NSError *)error withTextField:(UITextField *)textField;
+- (void)onSucess:(KDTextField *)textField;
+- (void)doneWithNumberPad:(KDTextField *)textField;
+- (void)addCustomValidation:(KDTextField *)textField;
 
 @end
 
-@interface KDTextField : UITextField
+@interface KDTextField : UITextField <UITextFieldDelegate>
 
 @property (nonatomic) KDTextFieldType textFieldtype;
+@property (nonatomic, setter = setClearIfInValid:) BOOL clearIfInValid;
+@property (nonatomic) BOOL isAnimated;
+@property (nonatomic) BOOL isMultipleEmailAddresses;
 @property (nonatomic, strong) id <KDTextFieldDelegate> kdDelegate;
 
 - (id)initWithType:(KDTextFieldType)textFieldtype;
-
 - (void)validateTextFieldAnimated:(BOOL)isAnimated;
+- (void)setNormalBorderColor:(UIColor *)normalBorderColor errorBorderColor:(UIColor *)errorBorderColor normalTextColor:(UIColor *)normalTextColor errorTextColor:(UIColor *)errorTextColor normalBorderWidth:(CGFloat)normalBorderWidth errorBorderWidth:(CGFloat)errorBorderWidth;
 
 @end

@@ -17,14 +17,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"%@",[[NSBundle mainBundle] bundleIdentifier]);
+	
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark KDTextFieldDelegate Methods
+
+- (void)onError:(NSError *)error withTextField:(UITextField *)textField
+{
+    NSLog(@"ERROR ::: %@",[error localizedDescription]);
+}
+
+- (void)onSucess:(KDTextField *)textField
+{
+    NSLog(@"textField.text ::: %@", textField.text);
+}
+
+#pragma mark IBAction Methods
+
+- (IBAction)validateButtonClicked:(id)sender
+{
+    
 }
 
 @end
