@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "KDTextField.h"
 
-@interface KDViewController : UIViewController <KDTextFieldDelegate>
+@interface KDViewController : UIViewController <KDTextFieldDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet KDTextField *kdTextField;
 

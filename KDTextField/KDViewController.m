@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+	[self.kdTextField setTextFieldtype:kTextFieldTypeEmail];
+    [self.kdTextField setNormalBorderColor:[UIColor blueColor] errorBorderColor:[UIColor redColor] normalTextColor:[UIColor grayColor] errorTextColor:[UIColor grayColor] normalBorderWidth:1.0f errorBorderWidth:1.0f];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +43,15 @@
 
 - (IBAction)validateButtonClicked:(id)sender
 {
-    
+    [self.kdTextField validateTextFieldAnimated:YES];
+}
+
+#pragma mark UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 @end

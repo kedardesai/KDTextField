@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6676C019D01BC8000FA5B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6676BF19D01BC8000FA5B5 /* QuartzCore.framework */; };
 		1BBE251319CACBB10069CEE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE251219CACBB10069CEE6 /* Foundation.framework */; };
 		1BBE251519CACBB10069CEE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE251419CACBB10069CEE6 /* CoreGraphics.framework */; };
 		1BBE251719CACBB10069CEE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE251619CACBB10069CEE6 /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B6676BF19D01BC8000FA5B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1BBE250F19CACBB10069CEE6 /* KDTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KDTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBE251219CACBB10069CEE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BBE251419CACBB10069CEE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6676C019D01BC8000FA5B5 /* QuartzCore.framework in Frameworks */,
 				1BBE251519CACBB10069CEE6 /* CoreGraphics.framework in Frameworks */,
 				1BBE251719CACBB10069CEE6 /* UIKit.framework in Frameworks */,
 				1BBE251319CACBB10069CEE6 /* Foundation.framework in Frameworks */,
@@ -105,6 +108,7 @@
 		1BBE251119CACBB10069CEE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B6676BF19D01BC8000FA5B5 /* QuartzCore.framework */,
 				1BBE251219CACBB10069CEE6 /* Foundation.framework */,
 				1BBE251419CACBB10069CEE6 /* CoreGraphics.framework */,
 				1BBE251619CACBB10069CEE6 /* UIKit.framework */,
@@ -471,6 +475,7 @@
 				1BBE254319CACBB10069CEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BBE254419CACBB10069CEE6 /* Build configuration list for PBXNativeTarget "KDTextFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +484,7 @@
 				1BBE254619CACBB10069CEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

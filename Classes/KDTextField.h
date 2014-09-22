@@ -23,7 +23,7 @@ typedef enum {
     
 } KDTextFieldType;
 
-@protocol KDTextFieldDelegate <NSObject>
+@protocol KDTextFieldDelegate <UITextFieldDelegate>// <NSObject>
 
 @optional
 - (void)onError:(NSError *)error withTextField:(UITextField *)textField;
@@ -33,13 +33,13 @@ typedef enum {
 
 @end
 
-@interface KDTextField : UITextField <UITextFieldDelegate>
+@interface KDTextField : UITextField // <UITextFieldDelegate>
 
 @property (nonatomic) KDTextFieldType textFieldtype;
 @property (nonatomic, setter = setClearIfInValid:) BOOL clearIfInValid;
 @property (nonatomic) BOOL isAnimated;
 @property (nonatomic) BOOL isMultipleEmailAddresses;
-@property (nonatomic, strong) id <KDTextFieldDelegate> kdDelegate;
+@property (nonatomic, weak) id <KDTextFieldDelegate> delegate;
 
 - (id)initWithType:(KDTextFieldType)textFieldtype;
 - (void)validateTextFieldAnimated:(BOOL)isAnimated;

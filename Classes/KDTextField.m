@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Kedar Desai. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "KDTextField.h"
 
 NSString *const KDTextFieldDomain = @"KD.KDTextField";
@@ -192,7 +193,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
 
 - (void)setTextFieldtype:(KDTextFieldType)textFieldtype
 {
-    if (_textFieldtype != textFieldtype) {
+    if (self.textFieldtype != textFieldtype) {
         _textFieldtype = textFieldtype;
         [self setTextFieldStyleWithType];
     }
@@ -231,7 +232,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
     // Validate textField and if Animated make the border red or keep same border
     
     if (![self isTextNonEmpty]) { // In case text property of textField is empty
-        [self.kdDelegate onError:self.inValidError withTextField:self];
+        [self.delegate onError:self.inValidError withTextField:self];
         return;
     }
     
@@ -257,7 +258,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
             
         case kTextFieldTypeCustom:
         {
-            [self.kdDelegate addCustomValidation:self]; // Add some custom validation on developer's end.
+            [self.delegate addCustomValidation:self]; // Add some custom validation on developer's end.
             return;
         }
             break;
@@ -283,7 +284,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
             [self becomeFirstResponder];
         }
         
-        [self.kdDelegate onError:self.inValidError withTextField:self];
+        [self.delegate onError:self.inValidError withTextField:self];
         
     } else { // In case textField.text is valid
         if (self.normalTextColor) {
@@ -293,7 +294,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
             [[self layer] setBorderColor:self.normalBorderColor.CGColor];
             [[self layer] setBorderWidth:self.normalBorderWidth];
         }
-        [self.kdDelegate onSucess:self];
+        [self.delegate onSucess:self];
     }
 }
 
@@ -324,14 +325,6 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
     }
 }
 
-#pragma mark UITextFieldDelegate Methods
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self resignFirstResponder];
-    return NO;
-}
-
 #pragma mark UIAction Methods
 
 - (void)numberPadDoneButtonClicked:(UIBarButtonItem *)doneButton
@@ -339,7 +332,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
     [self validateTextFieldAnimated:self.isAnimated];
     
     if (!self.inValidError) { // In case textField.text is valid
-        [self.kdDelegate doneWithNumberPad:self];
+        [self.delegate doneWithNumberPad:self];
     }
 }
 
