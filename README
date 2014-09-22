@@ -1,0 +1,24 @@
+KDTextField
+--------------------
+
+
+As of now, we have developed KDTextField to provide all the validation for UITextField on assigning a type.
+
+Here are steps to use KDTextField:
+
+1. Import KDTextField.h
+2. Initialise object of KDTextField programmatically or using storyboard.
+3. Set type of KDTextField to provide basic validations.
+4. You can also use method to select border color, text color and border width for normal state and error state.
+5. Use validateTextFieldAnimated method to start validation when you needed.
+
+We have attached example Project. You can follow that.
+
+Here is an example of using KDTextField:
+
+[self.kdTextField setTextFieldtype:kTextFieldTypeEmail];
+[self.kdTextField setNormalBorderColor:[UIColor blueColor] errorBorderColor:[UIColor redColor] normalTextColor:[UIColor grayColor] errorTextColor:[UIColor grayColor] normalBorderWidth:1.0f errorBorderWidth:1.0f];
+
+
+// To Validate textField's text
+[self.kdTextField validateTextFieldAnimated:YES]; // YES is the boolean value used to animate error state and normal state of KDTextField.
