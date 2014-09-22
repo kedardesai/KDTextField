@@ -8,13 +8,28 @@ Here are steps to use KDTextField:
 
 1. Import KDTextField.h
 2. Initialise object of KDTextField programmatically or using storyboard.
-3. Set type of KDTextField to provide basic validations.
-4. You can also use method to select border color, text color and border width for normal state and error state.
-5. Use validateTextFieldAnimated method to start validation when you needed.
+3. Implement KDTextFieldDelegate in your .h file.
+4. Set type of KDTextField to provide basic validations.
+5. You can also use method to select border color, text color and border width for normal state and error state.
+6. Use validateTextFieldAnimated method to start validation when you needed.
 
 We have attached example Project. You can follow that.
 
 Here is an example of using KDTextField:
+
+In our example we have used storyboard.
+
+Drag and drop KDTextField.h and KDTextField.m in your project.
+
+Import KDTextField.h in viewController's .h file.
+Then created IBOutlet property for the control.
+
+@property (nonatomic, strong) IBOutlet KDTextField *kdTextField;
+
+KDTextField *kdTextField is mapped with UITextField component having class KDTextField in storyboard.
+(Take UITextField on view in storyboard. Go to component's identity inspector, at the right side. Change class under Custom Class to KDTextField.)
+
+Implement <KDTextFieldDelegate, UITextFieldDelegate> in your .h file.
 
 [self.kdTextField setTextFieldtype:kTextFieldTypeEmail];
 [self.kdTextField setNormalBorderColor:[UIColor blueColor] errorBorderColor:[UIColor redColor] normalTextColor:[UIColor grayColor] errorTextColor:[UIColor grayColor] normalBorderWidth:1.0f errorBorderWidth:1.0f];
@@ -22,3 +37,9 @@ Here is an example of using KDTextField:
 
 // To Validate textField's text
 [self.kdTextField validateTextFieldAnimated:YES]; // YES is the boolean value used to animate error state and normal state of KDTextField.
+
+
+If text property is invalid according to what you have given as input, onError method will get implented. It will catch your error.
+If text property is valid according to what you have given as input, onSucess method will get implented.
+
+
