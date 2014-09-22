@@ -26,7 +26,7 @@ typedef enum {
 @protocol KDTextFieldDelegate <UITextFieldDelegate>// <NSObject>
 
 @optional
-- (void)onError:(NSError *)error withTextField:(UITextField *)textField;
+- (void)onError:(NSError *)error withTextField:(KDTextField *)textField;
 - (void)onSucess:(KDTextField *)textField;
 - (void)doneWithNumberPad:(KDTextField *)textField;
 - (void)addCustomValidation:(KDTextField *)textField;

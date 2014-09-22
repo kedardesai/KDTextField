@@ -29,7 +29,7 @@
 
 #pragma mark KDTextFieldDelegate Methods
 
-- (void)onError:(NSError *)error withTextField:(UITextField *)textField
+- (void)onError:(NSError *)error withTextField:(KDTextField *)textField
 {
     NSLog(@"ERROR ::: %@",[error localizedDescription]);
 }
