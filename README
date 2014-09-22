@@ -42,4 +42,6 @@ Implement <KDTextFieldDelegate, UITextFieldDelegate> in your .h file.
 If text property is invalid according to what you have given as input, onError method will get implented. It will catch your error.
 If text property is valid according to what you have given as input, onSucess method will get implented.
 
+In case of numeric keypad it will call doneWithNumberPad when it will click on 'Done' button above keyboard.
 
+If developer wants to set different validation than that what we have provided, Then he can make use of type kTextFieldTypeCustom, and can use addCustomValidation method.
