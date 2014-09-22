@@ -43,6 +43,7 @@
 
 - (IBAction)validateButtonClicked:(id)sender
 {
+    // To Validate textField's text
     [self.kdTextField validateTextFieldAnimated:YES];
 }
 
