@@ -39,6 +39,11 @@
     NSLog(@"textField.text ::: %@", textField.text);
 }
 
+- (void)doneWithNumberPad:(KDTextField *)textField
+{
+    NSLog(@"textField.text ::: %@", textField.text);
+}
+
 #pragma mark IBAction Methods
 
 - (IBAction)validateButtonClicked:(id)sender

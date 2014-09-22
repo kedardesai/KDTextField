@@ -264,6 +264,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
             break;
             
         default:
+            isValid = YES;
             break;
     }
     
@@ -333,6 +334,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
     
     if (!self.inValidError) { // In case textField.text is valid
         [self.delegate doneWithNumberPad:self];
+        [self resignFirstResponder];
     }
 }
 
@@ -406,7 +408,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
 
 - (BOOL)isTextValidString
 {
-    NSString *stringRegex = @"[a-zA-Z]";
+    NSString *stringRegex = @"[a-z A-Z]*";
     NSPredicate *stringTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stringRegex];
     BOOL isValid = [stringTest evaluateWithObject:self.text];
     if (!isValid) {
