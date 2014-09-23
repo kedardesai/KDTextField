@@ -25,6 +25,8 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
 @property (nonatomic, strong) UIColor *errorTextColor;
 @property (nonatomic) CGFloat normalBorderWidth;
 @property (nonatomic) CGFloat errorBorderWidth;
+@property (nonatomic) NSInteger direction;
+@property (nonatomic) NSInteger shakes;
 
 - (void)commonInit;
 - (void)setTextFieldStyleWithType;
@@ -231,13 +233,28 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
 {
     // Validate textField and if Animated make the border red or keep same border
     
+    self.isAnimated = isAnimated;
+    
     if (![self isTextNonEmpty]) { // In case text property of textField is empty
+        if (self.isAnimated) { // In case developer allows animation in color and automation in user entry.
+            if (self.errorBorderWidth>0.0f) {
+                [[self layer] setBorderColor:[self.errorBorderColor CGColor]];
+                [[self layer] setBorderWidth:self.errorBorderWidth];
+            }
+            if (self.errorTextColor) {
+                [self setTextColor:self.errorTextColor];
+            }
+            self.direction = 1;
+            self.shakes = 0;
+            [self shakeTextField];
+        }
+        
         [self.delegate onError:self.inValidError withTextField:self];
+        
         return;
     }
     
     BOOL isValid = NO;
-    self.isAnimated = isAnimated;
     
     switch (self.textFieldtype) {
         case kTextFieldTypeEmail:
@@ -269,6 +286,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
     }
     
     if (!isValid) { // In case textField.text is not valid
+        
         if (self.clearIfInValid) {
             [self setText:@""];
         }
@@ -281,8 +299,9 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
             if (self.errorTextColor) {
                 [self setTextColor:self.errorTextColor];
             }
-            
-            [self becomeFirstResponder];
+            self.direction = 1;
+            self.shakes = 0;
+            [self shakeTextField];
         }
         
         [self.delegate onError:self.inValidError withTextField:self];
@@ -324,6 +343,27 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
     if (errorBorderWidth) {
         self.errorBorderWidth = errorBorderWidth;
     }
+}
+
+- (void)shakeTextField
+{
+    
+    [UIView animateWithDuration:0.03 animations:^ {
+        
+        self.transform = CGAffineTransformMakeTranslation(5*self.direction, 0);
+        
+    } completion:^(BOOL finished) {
+        
+        if(self.shakes >= 10)
+        {
+            self.transform = CGAffineTransformIdentity;
+            return;
+        }
+        self.shakes++;
+        self.direction = self.direction * -1;
+        [self shakeTextField];
+        
+    }];
 }
 
 #pragma mark UIAction Methods

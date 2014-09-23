@@ -42,7 +42,11 @@ typedef enum {
 @property (nonatomic, weak) id <KDTextFieldDelegate> delegate;
 
 - (id)initWithType:(KDTextFieldType)textFieldtype;
+
 - (void)validateTextFieldAnimated:(BOOL)isAnimated;
+
 - (void)setNormalBorderColor:(UIColor *)normalBorderColor errorBorderColor:(UIColor *)errorBorderColor normalTextColor:(UIColor *)normalTextColor errorTextColor:(UIColor *)errorTextColor normalBorderWidth:(CGFloat)normalBorderWidth errorBorderWidth:(CGFloat)errorBorderWidth;
+
+- (void)shakeTextField;
 
 @end
