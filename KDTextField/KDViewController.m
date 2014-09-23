@@ -10,6 +10,8 @@
 
 @interface KDViewController ()
 
+- (void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)msg;
+
 @end
 
 @implementation KDViewController
@@ -31,17 +33,17 @@
 
 - (void)onError:(NSError *)error withTextField:(KDTextField *)textField
 {
-    NSLog(@"ERROR ::: %@",[error localizedDescription]);
+    [self showAlertViewWithTitle:@"Error - Invalid Text" andMessage:[error localizedDescription]];
 }
 
 - (void)onSucess:(KDTextField *)textField
 {
-    NSLog(@"textField.text ::: %@", textField.text);
+    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
 }
 
 - (void)doneWithNumberPad:(KDTextField *)textField
 {
-    NSLog(@"textField.text ::: %@", textField.text);
+    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
 }
 
 #pragma mark IBAction Methods
@@ -58,6 +60,14 @@
 {
     [textField resignFirstResponder];
     return NO;
+}
+
+#pragma mark Code-Reusable Methods
+
+- (void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)msg
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 @end
