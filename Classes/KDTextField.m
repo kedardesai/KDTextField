@@ -285,6 +285,7 @@ NSString *const ERROR_INVALID_STRING = @"Invalid string entered."; // Code : 100
             break;
     }
     
+    self.isValid = isValid;
     if (!isValid) { // In case textField.text is not valid
         
         if (self.clearIfInValid) {

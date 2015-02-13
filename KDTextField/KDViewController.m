@@ -33,17 +33,17 @@
 
 - (void)onError:(NSError *)error withTextField:(KDTextField *)textField
 {
-    [self showAlertViewWithTitle:@"Error - Invalid Text" andMessage:[error localizedDescription]];
+//    [self showAlertViewWithTitle:@"Error - Invalid Text" andMessage:[error localizedDescription]];
 }
 
 - (void)onSucess:(KDTextField *)textField
 {
-    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
+//    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
 }
 
 - (void)doneWithNumberPad:(KDTextField *)textField
 {
-    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
+//    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
 }
 
 #pragma mark IBAction Methods
@@ -52,6 +52,12 @@
 {
     // To Validate textField's text
     [self.kdTextField validateTextFieldAnimated:YES];
+    if (self.kdTextField.isValid) {
+        [self showAlertViewWithTitle:@"Success" andMessage:@"Success"];
+        
+    } else {
+        [self showAlertViewWithTitle:@"Error - Invalid Text" andMessage:@"Error"];
+    }
 }
 
 #pragma mark UITextFieldDelegate Methods
